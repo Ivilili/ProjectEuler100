@@ -5,15 +5,13 @@
 //Find the sum of all the multiples of 3 or 5 below the provided parameter value number.
 
 function multiplesOf3and5(number) {
-  let nums = [];
-  
-  for(let i = 0; i<number; i++){
-   if(i % 3 === 0 || i % 5 === 0 ){
-     nums.push(i); 
-   }  
-  }
- return nums.reduce((a,b) => a + b, 0);
-  
+  let sum = 0;
+  for (var i = 0; i < number; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {    
+        sum = sum + i;
+    }
+}
+    return sum; 
 }
 
 multiplesOf3and5(1000);  //233168
